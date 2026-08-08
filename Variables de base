@@ -1,0 +1,20 @@
+local age = 15
+local prenom = "Momo"
+local estMajeur = false
+
+print("Salut je m'appelle " .. prenom .. " et j'ai " .. age .. " ans.")
+
+age = age + 1
+age += 1
+
+
+age -= 10
+age = age - 10
+
+age = age * 10
+age *= 10
+
+age = age / 10
+age /= 10
+
+print("Salut je m'appelle " .. prenom .. " et j'ai " .. age .. " ans.")
