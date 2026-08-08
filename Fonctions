@@ -1,0 +1,79 @@
+-- function
+
+function welcome()
+	print("Bienvenue sur mon jeu")
+	local result = 5 + 10
+	print("Le résultat est " .. result)
+end
+
+
+welcome()
+
+
+
+
+-- function 2
+
+function next_year()
+	print("Fin de l'année ", _G.year)
+	_G.year = _G.year + 1
+	print("Début de l'année ", _G.year)
+end
+
+_G.year = 2020
+next_year()
+
+
+
+
+-- function 3
+
+function addition()
+	local result = 5 + 7
+	return result
+end
+print("Le résultat du calcul est : ", addition())
+
+
+
+
+-- function 4
+
+function calc(a, b)
+	return a + b
+end
+
+print("Le résultat du calcul est : ", calc(5, 10))
+
+-- Exercice faire une fonction qui retourne le plus grand des deux nombres placé en paramètres
+
+function max(a, b)
+	if a > b then
+		return a
+	else
+		return b
+	end
+end
+
+local a = 5
+local b = 20
+
+print("Le nombre le plus grand est : ", max(a, b))
+
+
+-- kill part
+
+function killPlayer(part)
+	local character = part.Parent
+	
+	-- vérifie si le personnage est un joueur
+	if character and character:IsA("Model") then
+		local humanoid = character:FindFirstChildOfClass("Humanoid")
+		if humanoid then
+			humanoid:TakeDamage(humanoid.MaxHealth)
+		end
+	end
+end
+
+
+script.Parent.Touched:Connect(killPlayer)
