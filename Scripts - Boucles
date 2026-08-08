@@ -1,0 +1,17 @@
+-- Variables 
+local top = script.Parent.Top
+local bottom = script.Parent.Bottom
+local middle = script.Parent.Middle
+
+
+while true  do
+	top.BrickColor = BrickColor.Red()
+	wait(5)
+	top.BrickColor = BrickColor.Gray()
+	middle.BrickColor = BrickColor.Yellow()
+	wait(1)
+	middle.BrickColor = BrickColor.Gray()
+	bottom.BrickColor = BrickColor.Green()
+	wait(5)
+	bottom.BrickColor = BrickColor.Gray()
+end
