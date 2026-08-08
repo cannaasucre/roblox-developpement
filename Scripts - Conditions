@@ -1,1 +1,23 @@
+local wallet = 2500
+local computer = 1000
 
+if wallet > 1500 then
+	print ("Nous pouvons acheter l'ordinateur à " .. computer .. " euros.")
+	wallet = wallet - computer
+	print("Achat réussi !")
+	print("Wallet = " .. wallet .. " euros.")
+else
+	print("Nous ne pouvons pas acheter l'ordinateur à " .. computer .. " euros.")
+end
+
+-- Vérifier la taille du nom du script
+-- Minimum 8 caractères
+-- Pour vérifier la taille : string.len("votre string")
+
+local prog = script
+
+if string.len(prog.Name) >= 8 then
+	print("Notre programme possède assez de caractères.")
+else
+	print("Erreur, votre nom de script est trop court !")
+end
