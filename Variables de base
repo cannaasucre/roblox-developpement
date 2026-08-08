@@ -18,3 +18,22 @@ age = age / 10
 age /= 10
 
 print("Salut je m'appelle " .. prenom .. " et j'ai " .. age .. " ans.")
+
+
+-- Exo
+-- Variables (joueur, argent, prixObject)
+-- Le joueur achete l'object
+-- Renomme son prenom
+
+local joueur = "Toto"
+local argent = 50
+local prixObject = 25
+
+print(joueur .. " possède : " .. argent .. " €.")
+
+-- Achat 
+argent = argent - prixObject
+
+print("Achat réussi !")
+
+print(joueur .. " possède : " .. argent .. " €.")
